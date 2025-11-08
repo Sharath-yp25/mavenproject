@@ -8,6 +8,6 @@ node {
     sh 'mvn package'
   }
   stage('print'){
-    echo "Hi, my name is Sagar"
+    echo "Hi, my name is Sagar kumar"
 }
 }
