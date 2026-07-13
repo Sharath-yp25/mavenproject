@@ -1,0 +1,21 @@
+name: Maven project
+on:
+  push:
+    branches: [ "master" ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Cloning maven project
+        uses: actions/checkout@v7.0.0
+
+      - name: Install java
+        uses: actions/setup-java@v5.5.0
+        with:
+          java-version: '21'
+          distribution: 'temurin'
+
+      - name: Generating package for maven project
+        run: mvn package
