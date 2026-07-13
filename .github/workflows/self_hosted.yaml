@@ -20,4 +20,5 @@ jobs:
         run: mvn --version
 
       - name: generating package
+        shell: cmd
         run: mvn clean package
