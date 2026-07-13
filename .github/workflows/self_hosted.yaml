@@ -12,9 +12,11 @@ jobs:
         uses: actions/checkout@v7.0.0
 
       - name: java version
+        shell: cmd
         run: java --version
 
       - name: maven version
+        shell: cmd
         run: mvn --version
 
       - name: generating package
