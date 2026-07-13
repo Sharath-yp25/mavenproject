@@ -1,0 +1,21 @@
+name: Maven job on windows
+on:
+  push:
+    branches: [ "master" ]
+
+jobs:
+  build:
+    runs-on: self-hosted
+
+    steps:
+      - name: cloning maven project
+        uses: actions/checkout@v7.0.0
+
+      - name: java version
+        run: java --version
+
+      - name: maven version
+        run: mvn --version
+
+      - name: generating package
+        run: mvn package
