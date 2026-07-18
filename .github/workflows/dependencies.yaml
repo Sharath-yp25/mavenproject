@@ -23,3 +23,10 @@ jobs:
         
       - name: execute maven package
         run: mvn package
+
+  new-job:
+    needs: java
+    runs-on: ubuntu-latest
+    steps:
+      - name: checking maven version
+        run: mvn --version
