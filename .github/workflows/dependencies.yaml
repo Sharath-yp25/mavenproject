@@ -18,5 +18,8 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      - name: cloning github repo
+        uses: actions/checkout@v7.0.0
+        
       - name: execute maven package
         run: mvn package
